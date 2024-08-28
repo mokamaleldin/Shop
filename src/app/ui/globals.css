@@ -1,4 +1,77 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* font styles */
+.heading-1 {
+  font-weight: 500;
+  font-size: 33px;
+}
 
+.heading-2 {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 35px;
+}
+
+.heading-3 {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.heading-4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.heading-5 {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  margin-bottom: 10px;
+}
+
+.body-large {
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.body-medium {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.body-small {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 640px) {
+  .heading-1 {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  .heading-2 {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 10px;
+  }
+
+  .heading-3 {
+    font-weight: 400;
+    font-size: 14px;
+  }
+
+  .body-small {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+}
