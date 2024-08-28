@@ -1,10 +1,8 @@
 import { TProduct } from "@/app/types/Product"
 import Image from "next/image"
 import Link from "next/link";
-type CardProps = {
-    product: TProduct;
-};
-const Card: React.FC<CardProps> = ({ product }) => {
+
+const Card = ({ product }: { product: TProduct }) => {
     return (
         <Link href={`/Product/${product.slug}`} className=" mb-16">
             <Image src={product.image} alt={product.name} width={350} height={350} />
