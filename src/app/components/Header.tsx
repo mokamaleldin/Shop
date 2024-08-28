@@ -11,9 +11,9 @@ const Header = () => {
             </div>
             <nav className="flex items-center gap-8 text-sm">
                 <div className="flex gap-8">
-                    <Link href="/">Shop</Link>
-                    <Link href="/">Blog</Link>
-                    <Link href="/">Our Story</Link>
+                    <Link href="/Shop">Shop</Link>
+                    <Link href="/Blog">Blog</Link>
+                    <Link href="/About">Our Story</Link>
                 </div>
                 <div className="text-DarkGray">|</div>
                 <div className="flex gap-8">
