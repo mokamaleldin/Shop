@@ -1,6 +1,8 @@
 const LastItems = () => {
     return (
-        <div>LastItems</div>
+        <div>
+            
+        </div>
     )
 }
 export default LastItems
