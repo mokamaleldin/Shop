@@ -1,5 +1,6 @@
 import About from "@/app/components/Product/About"
 import { Hero } from "@/app/components/Product/Hero"
+import SimilarItems from "@/app/components/Product/SimilarItems"
 import products from "@/app/static/products"
 
 const page = ({ params }: { params: { slug: string } }) => {
@@ -11,6 +12,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                         <div key={product.name} className="mb-16">
                             <Hero product={product} />
                             <About product={product} />
+                            <SimilarItems slug={params.slug} />
                         </div>
                     )
                 }

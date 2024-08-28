@@ -9,5 +9,7 @@ export interface TProduct {
         dimensions: string;
         colours: string;
         material: string;
-    }
+    };
+    category: string;
+    SKU: string;
 }
