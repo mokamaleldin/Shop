@@ -11,4 +11,4 @@ const Card = ({ product }: { product: TProduct }) => {
         </Link>
     )
 }
-export default Card
+export default Card 
