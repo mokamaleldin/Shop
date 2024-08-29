@@ -2,6 +2,7 @@ import { TProduct } from "@/app/types/Product"
 import Image from "next/image"
 import Link from "next/link"
 import ProductShareIcon from "./ProductShareIcon"
+import AddToCard from "./AddToCard"
 
 export const ProductDetails = ({ product }: { product: TProduct }) => {
     return (
@@ -17,30 +18,12 @@ export const ProductDetails = ({ product }: { product: TProduct }) => {
                     <p className="my-8 text-lg text-accent">${product.price},00</p>
                     <p className="text-DarkGray my-8">{product.description}</p>
                 </div>
-
-                <div className="flex items-center gap-10 my-8">
-                    <div className="bg-LightGray text-DarkGray flex gap-6 px-8 py-3 rounded-md">
-                        <button>-</button>
-                        <div>1</div>
-                        <button>+</button>
-                    </div>
-                    <div>
-                        <button className="border px-16 py-3 rounded-md font-semibold duration-200 border-black text-black hover:text-white hover:bg-black">
-                            ADD TO CART
-                        </button>
-                    </div>
+                <AddToCard />
+                <ProductShareIcon />
+                <div className="py-8 ">
+                    <div className="font-medium">SKU : <span className="ml-3 font-normal text-DarkGray">{product.SKU}</span></div>
+                    <div className="font-medium">Categories: : <span className="ml-3 font-normal text-DarkGray">{product.category}</span></div>
                 </div>
-
-                <div className="flex gap-8 text-Gray items-center">
-                    <Link href="https://love.com" aria-label="LinkedIn">
-                        <Image src="/icons/love.svg" alt="LinkedIn icon" width={20} height={20} />
-                    </Link>
-                    <div >|</div>
-                    <ProductShareIcon />
-                </div>
-
-
-                <div> </div>
 
             </div>
         </div >
