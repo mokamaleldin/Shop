@@ -1,20 +1,12 @@
-import posts from "@/app/static/Post"
+import Post from "@/app/components/Blog/Post"
+import TagsAndShare from "@/app/components/Blog/TagsAndShare"
+
 
 const page = ({ params }: { params: { slug: string } }) => {
     return (
         <div className="mx-20">
-            {posts.map((post) => {
-                if (post.slug === params.slug) {
-                    return (
-                        <div key={post.slug} className="mb-16">
-                            <h2 className="font-medium text-black text-3xl">{post.title}</h2>
-                            <div className="flex gap-2 items-center">
-
-                            </div>
-                        </div>
-                    )
-                }
-            })}
+            <Post postSlug={params.slug} />
+            <TagsAndShare />
         </div>
     )
 }
