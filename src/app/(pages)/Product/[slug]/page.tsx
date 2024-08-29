@@ -12,7 +12,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                         <div key={product.name} className="mb-16">
                             <ProductDetails product={product} />
                             <AboutProduct product={product} />
-                            <SimilarItemsProduct slug={params.slug} />
+                            <SimilarItemsProduct category={product.category} SKU={product.SKU} />
                         </div>
                     )
                 }
