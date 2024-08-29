@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { dmSans } from '@/app/ui/fonts';
 import "./ui/globals.css";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
+import Header from "./components/main/Header";
+import Footer from "./components/main/Footer";
 
 export const metadata: Metadata = {
   title: "Shop App",
