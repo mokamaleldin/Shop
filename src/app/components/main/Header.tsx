@@ -27,11 +27,9 @@ const Header = () => {
                 </div>
                 <div className="text-DarkGray">|</div>
                 <div className="flex gap-8">
-                    <Link href="/">
-                        <button onClick={handleOpenShopSide} >
+                     <button onClick={handleOpenShopSide} >
                             <Image src="/icons/shopping.svg" alt="Shopping cart icon" width={20} height={20} />
-                        </button>
-                    </Link>
+                    </button>
                     <Link href="/">
                         <Image src="/icons/search.svg" alt="Search icon" width={20} height={20} />
                     </Link>
