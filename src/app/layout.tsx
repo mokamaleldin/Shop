@@ -3,7 +3,9 @@ import { dmSans } from '@/app/ui/fonts';
 import "./ui/globals.css";
 import Header from "./components/main/Header";
 import Footer from "./components/main/Footer";
-import { CardContext } from "./Context/CardContex";
+import { Provider } from "react-redux";
+import store from "./lib/store";
+import StoreProvider from "./StoreProvider";
 
 export const metadata: Metadata = {
   title: "Shop App",
@@ -19,11 +21,12 @@ export default function RootLayout({
     <html lang="en">
 
       <body className={dmSans.className}>
-        {/* <CardContext.Provider value={{}}> */}
+        <StoreProvider>
         <Header />
         {children}
         <Footer />
-        {/* </CardContext.Provider> */}
+        </StoreProvider>
+
 
       </body>
     </html>
