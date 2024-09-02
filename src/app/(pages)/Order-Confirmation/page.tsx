@@ -8,7 +8,7 @@ const page = () => {
             <h2 className="text-4xl font-medium text-center "> Order Confirmation</h2>
 
 
-            <div className="flex justify-center items-start gap-8 my-16" >
+            <div className="flex justify-center items-start gap-16 my-16" >
                 <div className="w-1/2">
                     <h2 className="text-2xl font-medium  ">Order Details</h2>
                     <div className="my-4">
