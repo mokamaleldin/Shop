@@ -3,14 +3,14 @@ export interface TProduct {
     name: string;
     image: string;
     slug?: string;
-    description: string;
-    additionalInfo: {
+    description?: string;
+    additionalInfo?: {
         weight: string;
         dimensions: string;
         colours: string;
         material: string;
     };
-    category: string;
+    category?: string;
     SKU: string;
-    discount: number
+    discount?: number
 }
