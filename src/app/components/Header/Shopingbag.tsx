@@ -46,7 +46,7 @@ const Shopingbag = () => {
                     <p>Subtotal {cart.length > 1 ? `${cart.length} Items` : `${cart.length} Item`}</p>
                     <p>${totalPrice}</p>
                 </div>
-                <Link href="/Cart">
+                <Link href="/Shopping-Card">
                     <button className="border w-full py-3 rounded-md font-semibold duration-200 border-black text-black hover:text-white hover:bg-black">
                         VIEW CART
                     </button>

@@ -1,6 +1,3 @@
-'use client'
-
-import { useState } from 'react'
 import { Dialog, DialogBackdrop, DialogPanel } from '@headlessui/react'
 import Shopingbag from './Shopingbag';
 

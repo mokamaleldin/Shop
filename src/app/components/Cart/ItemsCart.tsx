@@ -8,7 +8,7 @@ const ItemsCart = ({ cart }: { cart: TProduct[] }) => {
         <>
             {
                 cart.map((item) => (
-                    <div key={item.SKU} className="grid grid-cols-3 mb-4">
+                    <div key={item.SKU} className="lg:grid grid-cols-3 gap-4 mb-4">
                         <Image width={150} height={150} src={item.image} alt={item.name} />
                         <div className="flex flex-col gap-4">
                             <div className="font-">{item.name}</div>
