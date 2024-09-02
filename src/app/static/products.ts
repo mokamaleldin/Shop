@@ -47,7 +47,7 @@ const products: TProduct[] = [
         },
         category: "Jewelry",
         SKU: "PN-007",
-        discount: 10 
+        discount: 0 
     },
     {
         price: 20,
