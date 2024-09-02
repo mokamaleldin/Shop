@@ -12,7 +12,7 @@ const TotalPrice = ({ totalPrice, finalPrice }: { totalPrice: number, finalPrice
                     <div className="text-green-500">Congratulations! Your drive is free.</div>
                 )}
             </div>
-            <hr className="border-t-2 border-gray-300 mb-4" />
+            <hr className="border-t-2 border-Gray mb-4" />
             <div className="flex justify-between text-lg font-medium mb-4">
                 <div>Total</div>
                 <div>{finalPrice} USD</div>

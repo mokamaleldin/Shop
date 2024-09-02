@@ -5,7 +5,7 @@ const Footer = () => {
     return (
         <footer className="mx-20 my-10">
             <div className="mb-8 text-center">
-                <hr className="border-t-2 border-gray-300" />
+                <hr className="border-t-2 border-Gray" />
             </div>
             <nav className="flex justify-between items-start">
                 <div className="text-sm">
