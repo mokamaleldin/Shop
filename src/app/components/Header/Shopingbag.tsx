@@ -3,6 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { useSelector } from "react-redux"
 import DeleteItems from "../Cart/DeleteItems";
+import DecAndInc from "../Inputs/DecAndInc";
 
 const Shopingbag = () => {
     const cart = useSelector((state: RootState) => state.card.items);
@@ -28,9 +29,7 @@ const Shopingbag = () => {
                                 <div className="text-accent">{item.price} USD</div>
                                 <div className="text-sm justify-self-end text-DarkGray flex gap-2">
                                     <div>QTY:</div>
-                                    <button>-</button>
-                                    <div>1</div>
-                                    <button>+</button>
+                                    <DecAndInc />
                                 </div>
                             </div>
                         </div>

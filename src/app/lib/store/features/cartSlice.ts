@@ -3,7 +3,7 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 
 const initialState = {
-    items: [] as TProduct[],
+    items: [] as TProduct[], quantity: 0
 };
 
 const cardSlice = createSlice({
@@ -16,6 +16,16 @@ const cardSlice = createSlice({
         removeFromCart(state, action: PayloadAction<string>) {
             state.items = state.items.filter((item: TProduct) => item.SKU !== action.payload);
         },
+        Increment(state) {
+            state.quantity++;
+        },
+        Decrement(state) {
+            if (state.quantity <= 0) {
+                return;
+            }
+            state.quantity--;
+        }
+
     },
 });
 

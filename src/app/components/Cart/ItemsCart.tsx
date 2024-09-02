@@ -2,6 +2,7 @@
 import { TProduct } from "@/app/types/Product"
 import Image from "next/image";
 import DeleteItems from "./DeleteItems";
+import DecAndInc from "../Inputs/DecAndInc";
 
 const ItemsCart = ({ cart }: { cart: TProduct[] }) => {
     return (
@@ -16,9 +17,7 @@ const ItemsCart = ({ cart }: { cart: TProduct[] }) => {
                         </div>
                         <div className="flex gap-8">
                             <div className="bg-LightGray text-DarkGray flex w-fit h-fit gap-4 px-3 py-3 rounded-md">
-                                <button>-</button>
-                                <div>1</div>
-                                <button>+</button>
+                                <DecAndInc />
                             </div>
                             <DeleteItems SKU={item.SKU} />
                         </div>
