@@ -13,4 +13,6 @@ export interface TProduct {
     category?: string;
     SKU: string;
     discount?: number
+    quantity: number;
+
 }

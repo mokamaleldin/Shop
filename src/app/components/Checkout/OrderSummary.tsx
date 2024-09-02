@@ -5,7 +5,7 @@ import { useSelector } from "react-redux";
 const OrderSummary = () => {
     const cart = useSelector((state: RootState) => state.card.items);
 
-    const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
+    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const free = totalPrice < driveFreeThreshold ? "Shipping is not free" : "Free shipping";
     const finalPrice = totalPrice < driveFreeThreshold ? totalPrice + additionalCost : totalPrice;
 

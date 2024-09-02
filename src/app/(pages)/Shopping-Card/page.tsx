@@ -9,7 +9,7 @@ const page = () => {
     const cart = useSelector((state: RootState) => state.card.items);
     
     // Calculate the total price of the cart
-    const totalPrice = cart.reduce((sum, item) => sum + item.price, 0);
+    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     // Calculate the final price of the cart
     const finalPrice = totalPrice < driveFreeThreshold ? totalPrice + additionalCost : totalPrice;
 
