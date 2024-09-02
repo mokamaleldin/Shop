@@ -11,7 +11,6 @@ const Shopingbag = () => {
     return (
         <div className="mt-12 mb-4 mx-4 flex flex-col gap-4 overflow-hidden">
             <div className="text-lg ">Shopping bag</div>
-            <div className="text-xs text-DarkGray">(Number) items</div>
 
             <div className="overflow-auto">
                 <div>
