@@ -6,7 +6,7 @@ import DeleteItems from "../Cart/DeleteItems";
 import { CardAction } from "@/app/lib/store/features/cartSlice";
 import { TProduct } from "@/app/types/Product";
 
-const Shopingbag = () => {
+const Shopingbag = ({ setOpen }: { setOpen: (isOpen: boolean) => void }) => {
     const cart = useSelector((state: RootState) => state.card.items);
 
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
@@ -59,11 +59,13 @@ const Shopingbag = () => {
                     <p>Subtotal {cart.length > 1 ? `${cart.length} Items` : `${cart.length} Item`}</p>
                     <p>${totalPrice}</p>
                 </div>
+                {cart.length > 0 &&
                 <Link href="/Shopping-Card">
-                    <button className="border w-full py-3 rounded-md font-semibold duration-200 border-black text-black hover:text-white hover:bg-black">
+                        <button onClick={() => setOpen(false)} className="border w-full py-3 rounded-md font-semibold duration-200 border-black text-black hover:text-white hover:bg-black">
                         VIEW CART
                     </button>
                 </Link>
+                }
             </div>
         </div>
     )

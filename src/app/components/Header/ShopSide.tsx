@@ -22,7 +22,7 @@ export default function ShopSide({ open, setOpen }: ShopSideProps) {
                             className="pointer-events-auto w-screen max-w-md transform transition duration-500 ease-in-out data-[closed]:translate-x-full sm:duration-700"
                         >
                             <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
-                                <Shopingbag />
+                                <Shopingbag setOpen={setOpen} />
                             </div>
                         </DialogPanel>
                     </div>
