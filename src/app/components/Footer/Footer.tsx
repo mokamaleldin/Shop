@@ -15,7 +15,7 @@ const Footer = () => {
                         <Link href="/">SHIPPING AND RETURNS</Link>
                     </div>
                     <div>
-                        <p>© 2024 mkee. <span className="text-DarkGray">Terms of use</span> and <span className="text-DarkGray">privacy policy.</span></p>
+                        <p>© 2024 mkee. <span className="text-DarkGray">Terms of use</span> and <Link href={"/Privacy"} className="text-DarkGray hover:text-black">privacy policy.</Link></p>
                     </div>
                 </div>
                 <div className="flex gap-8">
