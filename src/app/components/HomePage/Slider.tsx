@@ -11,14 +11,13 @@ export default function SimpleSlider() {
     return (
         <Swiper
             pagination={true}
-            modules={[Pagination, Autoplay]} // Include Autoplay module
-            className="mySwiper flex justify-center items-center w-fit h-fit"
+            modules={[Pagination, Autoplay]} // تضمين وحدة التمرير التلقائي
             autoplay={{
-                delay: 10000, // 5 seconds
-                disableOnInteraction: false, // Continue autoplay even after user interaction
-                reverseDirection: true, // Switch slides in reverse order
+                delay: 10000, // التأخير بين الشرائح هو 10 ثوانٍ
+                disableOnInteraction: false, // الاستمرار في التمرير التلقائي حتى بعد تفاعل المستخدم
+                reverseDirection: true, // تغيير الشرائح بترتيب عكسي (من 1 إلى 2، ثم من 2 إلى 1)
             }}
-            loop={true} // Make sure the slider loops infinitely
+            loop={true} // التأكد من أن السلايدر يتكرر بشكل غير محدود
         >
             <SwiperSlide >
                 <Image src={'/HomePage/imgHome1.png'} alt="img" width={3000} height={500} className="w-full" />
