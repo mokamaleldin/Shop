@@ -1,7 +1,22 @@
-const Input = ({ placeholder }: { placeholder: string }) => {
+interface InputProps {
+    placeholder: string;
+    value?: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+    required?: boolean;
+    type?: string;
+}
+
+const Input: React.FC<InputProps> = ({ placeholder, value, onChange, required = false, type = 'text' }) => {
     return (
         <div className="w-full flex justify-end items-center relative">
-            <input type="text" placeholder={placeholder} className="border-b-2 focus:outline-none text-sm border-gray-300 py-3 w-full" />
+            <input
+                type={type}
+                placeholder={placeholder}
+                required={required}
+                onChange={onChange}
+                value={value}
+                className="border-b-2 focus:outline-none text-sm border-Gray py-3 w-full"
+            />
         </div>
     )
 }
