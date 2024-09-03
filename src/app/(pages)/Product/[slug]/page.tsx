@@ -1,7 +1,6 @@
 import AboutProduct from "@/app/components/Product/AboutProduct"
 import { ProductDetails } from "@/app/components/Product/ProductDetails"
 import SimilarItemsProduct from "@/app/components/Product/SimilarItemsProduct"
-import { CardAction } from "@/app/lib/store/features/cartSlice"
 import products from "@/app/static/products"
 const page = ({ params }: { params: { slug: string } }) => {
 
@@ -13,7 +12,7 @@ const page = ({ params }: { params: { slug: string } }) => {
                         <div key={product.SKU} className="mb-16">
                             <ProductDetails product={product} />
                             <AboutProduct product={product} />
-                            <SimilarItemsProduct category={product.category} SKU={product.SKU} />
+                            <SimilarItemsProduct category={product.category || ""} SKU={product.SKU} />
                         </div>
                     )
                 }

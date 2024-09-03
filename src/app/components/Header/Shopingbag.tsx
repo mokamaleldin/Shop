@@ -12,6 +12,7 @@ const Shopingbag = () => {
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
 
     const dispatch = useDispatch();
+
     const handleIncrement = (item: TProduct) => {
         dispatch(CardAction.addToCart(item));
     };
@@ -19,6 +20,7 @@ const Shopingbag = () => {
     const handleDecrement = (SKU: string) => {
         dispatch(CardAction.removeFromCart(SKU));
     };
+
     return (
         <div className="mt-12 mb-4 mx-4 flex flex-col gap-4 overflow-hidden">
             <div className="text-lg ">Shopping bag</div>
@@ -36,7 +38,7 @@ const Shopingbag = () => {
                                     <div>{item.name}</div>
                                     <DeleteItems SKU={item.SKU} />
                                 </div>
-                                <div className="text-accent">{item.price} USD</div>
+                                <div className="text-accent">{item.price * item.quantity} USD</div>
                                 <div className="text-sm justify-self-end text-DarkGray flex gap-2">
                                     <div>QTY:</div>
                                     <button onClick={() => handleDecrement(item.SKU)}>-</button>

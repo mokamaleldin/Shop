@@ -21,33 +21,25 @@ const cardSlice = createSlice({
             state.quantity++;
             if (!existingItem) {
                 state.items.push({
-                    SKU: newItem.SKU,
-                    name: newItem.name,
-                    price: newItem.price,
-                    image: newItem.image,
+                    ...newItem,
                     quantity: 1,
                 });
             } else {
                 existingItem.quantity++;
-                existingItem.price = existingItem.price + newItem.price;
             }
         },
         removeFromCart(state, action: PayloadAction<string>) {
             const SKU = action.payload;
             const existingItem = state.items.find(item => item.SKU === SKU);
-            state.quantity--;
-            if (existingItem && existingItem.quantity === 1) {
-                state.items = state.items.filter(item => item.SKU !== SKU);
-            } else {
-                if (existingItem) {
+            if (existingItem) {
+                state.quantity--;
+                if (existingItem.quantity === 1) {
+                    state.items = state.items.filter(item => item.SKU !== SKU);
+                } else {
                     existingItem.quantity--;
-                }
-                if (existingItem) {
-                    existingItem.price = existingItem.price - existingItem.price;
                 }
             }
         },
-
     },
 });
 
