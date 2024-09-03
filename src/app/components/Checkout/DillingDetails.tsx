@@ -7,9 +7,11 @@ const DillingDetails = () => {
     const dispatch = useDispatch();
     const { firstName, lastName, country, streetAddress, postcode, city, phone, email, company, orderNotes } = useSelector((state: RootState) => state.checkout);
 
+    //field: عند حدوث تغيير في عنصر الإدخال Redux(state)  هو مصطلح يُستخدم للإشارة إلى اسم الحقل (أو العنصر) الذي يتم تحديثه في حالة الـ
     const handleInputChange = (field: string, value: string) => {
         dispatch(checkoutActions.updateField({ field, value }));
     }
+
     return (
         <form>
             <h2 className="text-2xl font-medium">Billing Details</h2>

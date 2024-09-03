@@ -2,10 +2,13 @@
 import { TProduct } from "@/app/types/Product"
 import Image from "next/image";
 import DeleteItems from "./DeleteItems";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { CardAction } from "@/app/lib/store/features/cartSlice";
+import { RootState } from "@/app/lib/store";
 
-const ItemsCart = ({ cart }: { cart: TProduct[] }) => {
+const ItemsCart = () => {
+    const cart = useSelector((state: RootState) => state.card.items);
+
     const dispatch = useDispatch();
     const handleIncrement = (item: TProduct) => {
         dispatch(CardAction.addToCart(item));

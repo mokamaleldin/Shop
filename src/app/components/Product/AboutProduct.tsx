@@ -20,10 +20,10 @@ const AboutProduct = ({ product }: { product: TProduct }) => {
                 {product.description}
             </div>}
             {tab === "aditional" && <div className="flex flex-col gap-2">
-                <div>Weight : <span className="ml-3 font-normal text-DarkGray">{product.additionalInfo.weight}</span></div>
-                <div>Dimentions : <span className="ml-3 font-normal text-DarkGray">{product.additionalInfo.dimensions}</span></div>
-                <div>Colours : <span className="ml-3 font-normal text-DarkGray">{product.additionalInfo.colours}</span></div>
-                <div>Material : <span className="ml-3 font-normal text-DarkGray">{product.additionalInfo.material}</span></div>
+                <div>Weight : <span className="ml-3 font-normal text-DarkGray">{product.additionalInfo?.weight}</span></div>
+                <div>Dimentions : <span className="ml-3 font-normal text-DarkGray">{product.additionalInfo?.dimensions}</span></div>
+                <div>Colours : <span className="ml-3 font-normal text-DarkGray">{product.additionalInfo?.colours}</span></div>
+                <div>Material : <span className="ml-3 font-normal text-DarkGray">{product.additionalInfo?.material}</span></div>
             </div>}
 
         </div>

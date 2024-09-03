@@ -1,7 +1,16 @@
-import { driveFreeThreshold } from "@/app/lib/config/config"
+import { additionalCost, driveFreeThreshold } from "@/app/lib/config/config"
+import { RootState } from "@/app/lib/store";
 import Link from "next/link"
+import { useSelector } from "react-redux";
 
-const TotalPrice = ({ totalPrice, finalPrice }: { totalPrice: number, finalPrice: number }) => {
+const TotalPrice = () => {
+    const cart = useSelector((state: RootState) => state.card.items);
+
+    // Calculate the total price of the cart
+    const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+    // Calculate the final price of the cart
+    const finalPrice = totalPrice < driveFreeThreshold ? totalPrice + additionalCost : totalPrice;
+    
     return (
         <>
             <h2 className="text-2xl font-medium mb-4">Cart Totals</h2>

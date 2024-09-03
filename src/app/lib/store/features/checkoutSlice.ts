@@ -17,15 +17,21 @@ const initialState = {
     orderNotes: '',
 }
 
+/*
+    function updateField: state هذه الدالة تقوم بتحديث حقل معين في الـ 
+    field:  الحقل الذي يتم تحديثه
+    field: عند حدوث تغيير في عنصر الإدخال Redux(state)  هو مصطلح يُستخدم للإشارة إلى اسم الحقل (أو العنصر) الذي يتم تحديثه في حالة الـ
+    value: القيمة الجديدة للحقل
+*/
+
 const checkoutSlice = createSlice({
     name: 'checkout',
     initialState,
     reducers: {
-        updateField(state: any, action) {
+        updateField(state: typeof initialState, action) {
             const { field, value } = action.payload;
-            state[field] = value;
+            state[field as keyof typeof initialState] = value;
         },
-        resetFields: () => initialState
     }
 })
 

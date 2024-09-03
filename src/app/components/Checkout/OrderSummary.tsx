@@ -18,7 +18,7 @@ const OrderSummary = () => {
 
             <hr className="border-t-2 border-Gray my-4" />
             {cart.map((item) => (
-                <div className="flex justify-between mb-4 text-DarkGray">
+                <div key={item.SKU} className="flex justify-between mb-4 text-DarkGray">
                     <p>{item.name}</p>
                     <p>${item.price * item.quantity}</p>
                 </div>

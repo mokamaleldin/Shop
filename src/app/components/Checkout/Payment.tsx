@@ -3,6 +3,7 @@ import Input from "../Inputs/Input"
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/app/lib/store";
 import { checkoutActions } from "@/app/lib/store/features/checkoutSlice";
+import PaymentImg from "./PaymentImg";
 
 const Payment = () => {
     const dispatch = useDispatch();
@@ -13,17 +14,9 @@ const Payment = () => {
     }
     return (
         <div>
-            <hr className="border-t-2 border-Gray my-4" />
             <div className="flex justify-between items-center font-semibold mb-8">
                 <p className="font-semibold">Payment Methods</p>
-                <div className="flex items-center gap-8">
-                    <Image width={50} height={50} className="h-8 w-auto dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/brand-logos/paypal.svg" alt="" />
-                    <Image width={50} height={50} className="hidden h-8 w-auto dark:flex" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/brand-logos/paypal-dark.svg" alt="" />
-                    <Image width={50} height={50} className="h-8 w-auto dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/brand-logos/visa.svg" alt="" />
-                    <Image width={50} height={50} className="hidden h-8 w-auto dark:flex" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/brand-logos/visa-dark.svg" alt="" />
-                    <Image width={50} height={50} className="h-8 w-auto dark:hidden" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/brand-logos/mastercard.svg" alt="" />
-                    <Image width={50} height={50} className="hidden h-8 w-auto dark:flex" src="https://flowbite.s3.amazonaws.com/blocks/e-commerce/brand-logos/mastercard-dark.svg" alt="" />
-                </div>
+                <PaymentImg />
             </div>
             <div>
                 <div className="text-sm text-DarkGray">
@@ -52,7 +45,8 @@ const Payment = () => {
                                 value={expirationDate}
                                 onChange={(e) => handleInputChange('expirationDate', e.target.value)}
                                 required
-                                type="text"
+                                type="date"
+                                pattern="\d{1,2}/\d{2}"
                                 placeholder={'MM/YY'}
                                 className="border-b-2 focus:outline-none bg-LightGray text-sm border-Gray py-2 w-full"
                             />
@@ -65,7 +59,7 @@ const Payment = () => {
                         </label>
                         <div className="w-full flex justify-end items-center relative">
                             <input
-                                type="text"
+                                type="number"
                                 placeholder="***"
                                 className="border-b-2 focus:outline-none bg-LightGray text-sm border-Gray py-2 w-full"
                                 value={cvv}
@@ -84,7 +78,8 @@ const Payment = () => {
                             <input
                                 datepicker-format="mm/yy"
                                 id="card-expiration-input"
-                                type="text" placeholder={'Full Name'}
+                                type="text"
+                                placeholder={'Full Name'}
                                 className="border-b-2 focus:outline-none bg-LightGray text-sm border-Gray py-2 w-full"
                                 value={cardholderName}
                                 onChange={(e) => handleInputChange('cardholderName', e.target.value)}

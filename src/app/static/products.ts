@@ -15,7 +15,8 @@ const products: TProduct[] = [
         },
         category: "Jewelry",
         SKU: "LE-001",
-        discount: 0 
+        discount: 0,
+        quantity: 0
     },
     {
         price: 20,
@@ -31,7 +32,8 @@ const products: TProduct[] = [
         },
         category: "Hair Accessories",
         SKU: "YHP-003",
-        discount: 6 
+        discount: 6,
+        quantity: 0
     },
     {
         price: 20,
@@ -47,7 +49,8 @@ const products: TProduct[] = [
         },
         category: "Jewelry",
         SKU: "PN-007",
-        discount: 0 
+        discount: 0,
+        quantity: 0
     },
     {
         price: 20,
@@ -63,7 +66,8 @@ const products: TProduct[] = [
         },
         category: "Hair Accessories",
         SKU: "HPS-009",
-        discount: 0 
+        discount: 0,
+        quantity: 0
     },
     {
         price: 20,
@@ -79,7 +83,8 @@ const products: TProduct[] = [
         },
         category: "Hair Accessories",
         SKU: "KHPS-012",
-        discount: 14 
+        discount: 14,
+        quantity: 0
     },
     {
         price: 20,
@@ -95,7 +100,8 @@ const products: TProduct[] = [
         },
         category: "Jewelry",
         SKU: "HE-015",
-        discount: 0 
+        discount: 0,
+        quantity: 0
     },
 ];
 
