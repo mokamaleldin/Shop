@@ -20,7 +20,7 @@ const OrderSummary = () => {
             {cart.map((item) => (
                 <div className="flex justify-between mb-4 text-DarkGray">
                     <p>{item.name}</p>
-                    <p>${item.price}</p>
+                    <p>${item.price * item.quantity}</p>
                 </div>
             ))}
 
@@ -39,7 +39,7 @@ const OrderSummary = () => {
             <hr className="border-t-2 border-Gray my-4" />
             <div className="flex justify-between font-semibold mb-8">
                 <p>TOTAL</p>
-                <p className="">{finalPrice}</p>
+                <p className="">${finalPrice}</p>
             </div>
         </>
     )

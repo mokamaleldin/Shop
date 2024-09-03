@@ -22,7 +22,7 @@ const ItemsCart = ({ cart }: { cart: TProduct[] }) => {
                         <Image width={150} height={150} src={item.image} alt={item.name} />
                         <div className="flex flex-col gap-4">
                             <div className="font-">{item.name}</div>
-                            <div className="text-accent">{item.price} USD</div>
+                            <div className="text-accent">${item.price} USD</div>
                         </div>
                         <div className="flex gap-8">
                             <div className="bg-LightGray text-DarkGray flex w-fit h-fit gap-4 px-3 py-3 rounded-md">

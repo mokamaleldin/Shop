@@ -15,7 +15,7 @@ const TotalPrice = ({ totalPrice, finalPrice }: { totalPrice: number, finalPrice
             <hr className="border-t-2 border-Gray mb-4" />
             <div className="flex justify-between text-lg font-medium mb-4">
                 <div>Total</div>
-                <div>{finalPrice} USD</div>
+                <div>${finalPrice} USD</div>
             </div>
             <Link href={'/Checkout '}>
                 <button className="border w-full py-3 rounded-md font-semibold duration-200 border-black text-white bg-black hover:text-black hover:bg-white">
