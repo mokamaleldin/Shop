@@ -10,7 +10,7 @@ const Footer = () => {
             <nav className="flex justify-between items-start">
                 <div className="text-sm">
                     <div className="flex text-DarkGray gap-8 mb-8">
-                        <Link href="/">CONTACT</Link>
+                        <Link href="/ContactUs">CONTACT</Link>
                         <Link href="/">TERMS OF SERVICES</Link>
                         <Link href="/">SHIPPING AND RETURNS</Link>
                     </div>
