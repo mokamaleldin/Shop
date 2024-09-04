@@ -2,7 +2,7 @@ import { TProduct } from "../types/Product";
 
 const products: TProduct[] = [
     {
-        price: 20,
+        price: 50,
         name: "Lira Earrings",
         image: "/Products/product4.png",
         slug: "lira-earrings",
@@ -19,7 +19,7 @@ const products: TProduct[] = [
         quantity: 0
     },
     {
-        price: 20,
+        price: 100,
         name: "Yuki Hair Pin Set of 3",
         image: "/Products/product1.png",
         slug: "yuki-hair-pin-set-of-3",
@@ -36,7 +36,7 @@ const products: TProduct[] = [
         quantity: 0
     },
     {
-        price: 20,
+        price: 200,
         name: "Plaine Necklace",
         image: "/Products/product2.png",
         slug: "plaine-necklace",
@@ -53,7 +53,7 @@ const products: TProduct[] = [
         quantity: 0
     },
     {
-        price: 20,
+        price: 180,
         name: "Hair Pin Set of 3",
         image: "/Products/product3.png",
         slug: "hair-pin-set-of-3",
@@ -70,7 +70,7 @@ const products: TProduct[] = [
         quantity: 0
     },
     {
-        price: 20,
+        price: 40,
         name: "Kaede Hair Pin Set Of 3",
         image: "/Products/product5.png",
         slug: "kaede-hair-pin-set-of-3",

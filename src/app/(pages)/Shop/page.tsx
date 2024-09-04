@@ -6,7 +6,7 @@ const page = () => {
     return (
         <div className="mx-20 ">
             <HeaderItems ShowAll={false} />
-            <div className="flex justify-between items-start">
+            <div className="flex justify-between items-start gap-8">
                 <Sidebar />
                 <AllCards />
             </div>

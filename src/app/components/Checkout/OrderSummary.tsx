@@ -8,8 +8,6 @@ const OrderSummary = () => {
     //this is the coupon state
     const { discount } = useSelector((state: RootState) => state.coupon);
 
-
-
     const totalPrice = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
     const free = totalPrice < driveFreeThreshold ? "Shipping is not free" : "Free shipping";
     const subtotal = totalPrice < driveFreeThreshold ? totalPrice + additionalCost : totalPrice;

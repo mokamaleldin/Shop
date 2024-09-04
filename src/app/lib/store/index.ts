@@ -1,14 +1,15 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { cardReducer } from "./features/cartSlice";
 import { checkoutReducer } from "./features/checkoutSlice";
-import Coupon from "@/app/components/Checkout/Coupon";
 import { couponReducer } from "./features/couponSlice";
+import { filterReducer } from "./features/filterSlice";
 
 const store = configureStore({
     reducer: {
         card: cardReducer,
         checkout: checkoutReducer,
         coupon: couponReducer,
+        filter: filterReducer,
     },
 })
 
