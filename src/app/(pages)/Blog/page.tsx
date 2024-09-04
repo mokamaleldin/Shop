@@ -8,7 +8,7 @@ const page = () => {
             <div className="my-8">
                 <h2 className="md:text-4xl text-2xl font-medium">Blog</h2>
             </div>
-            <div className="flex justify-between items-start">
+            <div className="md:flex justify-between items-start">
                 <BlogNavbar />
                 <GetPosts />
             </div>

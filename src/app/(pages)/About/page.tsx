@@ -21,7 +21,7 @@ const page = () => {
                 By fostering an environment where every voice is heard and every idea is valued, we ensure that our team is motivated to create impactful solutions.
                 Our core values reflect our commitment to integrity, transparency, and excellence in everything we do.
                 <div className="mt-8">
-                    <h5 className="text-xl font-medium mb-2"> Here are some of the key aspects that define us:</h5>
+                    <h5 className="md:text-xl font-medium mb-2"> Here are some of the key aspects that define us:</h5>
                     <ul>
                         <li>
                             <span className="text-DarkGray text-lg">Innovation</span> Continuously pushing the boundaries to create cutting-edge products.

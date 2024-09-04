@@ -11,7 +11,7 @@ export const ProductDetails = ({ product }: { product: TProduct }) => {
             </div>
             <div className=" w-1/2">
                 <div>
-                    <p className="text-xl text-black">{product.name}</p>
+                    <p className="md:text-xl text-black">{product.name}</p>
                     <p className="my-8 text-lg text-accent">${product.price},00</p>
                     <p className="text-DarkGray my-8">{product.description}</p>
                 </div>

@@ -28,8 +28,8 @@ const BlogNavbar = () => {
                 <Image loading="eager" src="/icons/search.svg" alt="search" width={20} height={20} className="absolute mr-2" />
             </div>
             <div className="my-8">
-                <h3 className="text-xl font-medium mb-4">Categories</h3>
-                <div className="flex flex-col text-DarkGray gap-2">
+                <h3 className="md:text-xl font-medium mb-4">Categories</h3>
+                <div className="flex md:flex-col gap-4 md:text-base text-sm  text-DarkGray md:gap-2" >
                     {["All", "Lifestyle", "Season", "Fashion", "Accessories"].map((category) => (
                         <p
                             key={category}

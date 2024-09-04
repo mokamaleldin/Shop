@@ -16,7 +16,7 @@ const GetPosts = () => {
     }
 
     return (
-        <div className="grid grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 grid-col-span-1 gap-8">
             {posts.filter(filterBlog).map((post, index) => {
                 return (
                     <div key={index}>
@@ -29,7 +29,7 @@ const GetPosts = () => {
                                 <p>-</p>
                                 <p>{post.date}</p>
                             </div>
-                            <h3 className="font-medium text-black text-xl">{post.title}</h3>
+                            <h3 className="font-medium text-black md:text-xl">{post.title}</h3>
                             <p className="md:max-w-[500px]">
                                 {post.description.length > 200 ? post.description.substring(0, 100) + "..." : post.description}
                             </p>
