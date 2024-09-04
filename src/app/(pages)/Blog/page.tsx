@@ -1,3 +1,4 @@
+"use client";
 import BlogNavbar from "@/app/components/Blog/BlogNavbar"
 import GetPosts from "@/app/components/Blog/GetPosts"
 

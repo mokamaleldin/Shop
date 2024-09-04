@@ -1,3 +1,4 @@
+"use client";
 import AllCards from "@/app/components/Card/AllCards"
 import HeaderItems from "@/app/components/Card/HeaderItems"
 import Sidebar from "@/app/components/ShopPage/Sidebar"
