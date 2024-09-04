@@ -1,11 +1,23 @@
+import { RootState } from "@/app/lib/store"
 import posts from "@/app/static/Post"
+import { TPost } from "@/app/types/Post"
 import Image from "next/image"
 import Link from "next/link"
+import { useSelector } from "react-redux"
 
 const GetPosts = () => {
+    const { filterBlogs, categoryBlog } = useSelector((state: RootState) => state.filter);
+
+    const filterBlog = (post: TPost) => {
+        const titleMatch = post.title.toLowerCase().includes(filterBlogs.toLowerCase());
+        const categoryMatch = categoryBlog === "All" || post.category === categoryBlog;
+
+        return titleMatch && categoryMatch;
+    }
+
     return (
         <div className="grid grid-cols-2 gap-8">
-            {posts.map((post, index) => {
+            {posts.filter(filterBlog).map((post, index) => {
                 return (
                     <div key={index}>
                         <Link href={`/Post/${post.slug}`} >
