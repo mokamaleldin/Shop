@@ -7,16 +7,14 @@ const Footer = () => {
             <div className="mb-8 text-center">
                 <hr className="border-t-2 border-Gray" />
             </div>
-            <nav className="flex justify-between items-start">
-                <div className="text-sm">
-                    <div className="flex text-DarkGray gap-8 mb-8">
+            <nav className="md:flex md:justify-between items-start">
+                <div className="ms:text-sm text-xs">
+                    <div className="flex text-DarkGray md:gap-8 gap-4 mb-8">
                         <Link rel="preload" href="/ContactUs">CONTACT</Link>
                         <Link rel="preload" href="/">TERMS OF SERVICES</Link>
                         <Link rel="preload" href="/">SHIPPING AND RETURNS</Link>
                     </div>
-                    <div>
-                        <p>© 2024 mkee. <span className="text-DarkGray">Terms of use</span> and <Link rel="preload" href={"/Privacy"} className="text-DarkGray hover:text-black">privacy policy.</Link></p>
-                    </div>
+
                 </div>
                 <div className="flex gap-8">
                     <Link rel="preload" href="https://linkedin.com" aria-label="LinkedIn">
@@ -30,6 +28,9 @@ const Footer = () => {
                     </Link>
                 </div>
             </nav>
+            <div className="md:mt-0 mt-8 md:text-base text-xs">
+                <p>© 2024 mkee. <span className="text-DarkGray">Terms of use</span> and <Link rel="preload" href={"/Privacy"} className="text-DarkGray hover:text-black">privacy policy.</Link></p>
+            </div>
         </footer>
     )
 }
