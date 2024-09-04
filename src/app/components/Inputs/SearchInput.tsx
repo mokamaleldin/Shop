@@ -6,7 +6,7 @@ const SearchInput = () => {
     const dispatch = useDispatch();
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        dispatch(filterActions.setFilterBlog(e.target.value));
+        dispatch(filterActions.setFilter(e.target.value));
     };
     return (
         <div className="w-full flex justify-end items-center relative">

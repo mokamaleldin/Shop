@@ -5,7 +5,7 @@ import OrderDetails from "@/app/components/Order-Confirmation/OrderDetails"
 const page = () => {
     return (
         <div className="md:mx-20 mx-5 ">
-            <h2 className="text-4xl font-medium text-center "> Order Confirmation</h2>
+            <h2 className="md:text-4xl text-2xl font-medium text-center "> Order Confirmation</h2>
 
 
             <div className="flex justify-center items-start gap-16 my-16" >

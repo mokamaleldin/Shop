@@ -1,7 +1,7 @@
 const page = () => {
     return (
         <div className="flex flex-col items-center justify-center md:mx-20 mx-5 gap-8 py-8">
-            <h2 className="text-4xl text-center font-medium">Privacy Policy</h2>
+            <h2 className="md:text-4xl text-2xl text-center font-medium">Privacy Policy</h2>
             <p className="lg:max-w-[600px]">
                 Duis rutrum dictum libero quis rutrum. Etiam sed neque aliquam, sollicitudin ante a, gravida arcu. Nam fringilla molestie velit, eget pellentesque risus scelerisque a. Nam ac urna maximus, tempor magna et, placerat urna. Curabitur eu magna enim. Proin placerat tortor lacus, ac sodales lectus placerat quis.
             </p>

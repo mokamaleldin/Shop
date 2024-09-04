@@ -20,7 +20,7 @@ const AllCards = () => {
 
 
     return (
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-3 grid-cols-2 gap-5 md:mt-0 mt-4">
             {products.filter(filterProducts).map((product) => (
                 <Card key={product.name} product={product} />
             ))}
