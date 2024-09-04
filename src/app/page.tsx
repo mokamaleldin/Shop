@@ -4,7 +4,7 @@ import SimpleSlider from "./components/HomePage/Slider";
 
 export default function Home() {
   return (
-    <main className="mx-20">
+    <main className="md:md:mx-20 mx-5 mx-5">
       <SimpleSlider />
       <HeaderItems ShowAll={true} />
       <CardHome />

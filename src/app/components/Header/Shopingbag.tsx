@@ -58,7 +58,7 @@ const Shopingbag = ({ setOpen }: { setOpen: (isOpen: boolean) => void }) => {
                         <p>Subtotal {cart.length > 1 ? `${cart.length} Items` : `${cart.length} Item`}</p>
                         <p>${totalPrice}</p>
                     </div>
-                    <Link href="/Shopping-Card">
+                    <Link rel="preload" href="/Shopping-Card">
                         <button onClick={() => setOpen(false)} className="border w-full py-3 rounded-md font-semibold duration-200 border-black text-black hover:text-white hover:bg-black">
                             VIEW CART
                         </button>

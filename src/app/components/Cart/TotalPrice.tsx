@@ -26,7 +26,7 @@ const TotalPrice = () => {
                 <div>Total</div>
                 <div>${finalPrice} USD</div>
             </div>
-            <Link href={'/Checkout '}>
+            <Link rel="preload" href={'/Checkout '}>
                 <button className="border w-full py-3 rounded-md font-semibold duration-200 border-black text-white bg-black hover:text-black hover:bg-white">
                     PROCEED TO CHECKOUT
                 </button>

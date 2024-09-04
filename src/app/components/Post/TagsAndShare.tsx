@@ -16,13 +16,13 @@ const TagsAndShare = () => {
                 <p className="font-medium ">Share </p>
                 <hr className="border-t w-12 border-black" />
                 <div className="flex gap-2 text-sm">
-                    <Link href="https://linkedin.com" aria-label="LinkedIn">
+                    <Link rel="preload" href="https://linkedin.com" aria-label="LinkedIn">
                         <Image loading="eager" src="/icons/LinkedIn.svg" alt="LinkedIn icon" width={20} height={20} />
                     </Link>
-                    <Link href="https://facebook.com" aria-label="Facebook">
+                    <Link rel="preload" href="https://facebook.com" aria-label="Facebook">
                         <Image loading="eager" src="/icons/facebook.svg" alt="Facebook icon" width={10} height={10} />
                     </Link>
-                    <Link href="https://instagram.com" aria-label="Instagram">
+                    <Link rel="preload" href="https://instagram.com" aria-label="Instagram">
                         <Image loading="eager" src="/icons/instgram.svg" alt="Instagram icon" width={20} height={20} />
                     </Link>
                 </div>

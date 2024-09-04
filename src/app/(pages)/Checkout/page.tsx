@@ -5,7 +5,7 @@ import YourOrder from "@/app/components/Checkout/YourOrder"
 
 const page = () => {
     return (
-        <div className="mx-20">
+        <div className="md:mx-20 mx-5-20 mx-5">
             <h2 className="text-4xl font-medium text-center ">Checkout</h2>
             <Coupon />
             <div className="flex justify-center items-start gap-8">

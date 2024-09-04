@@ -20,7 +20,7 @@ const GetPosts = () => {
             {posts.filter(filterBlog).map((post, index) => {
                 return (
                     <div key={index}>
-                        <Link href={`/Post/${post.slug}`} >
+                        <Link rel="preload" href={`/Post/${post.slug}`} >
                             <Image loading="eager" width={500} height={500} src={post.img} alt={post.title} />
                         </Link>
                         <div className="text-sm text-DarkGray flex flex-col gap-4 mt-4">
@@ -33,7 +33,7 @@ const GetPosts = () => {
                             <p className="md:max-w-[500px]">
                                 {post.description.length > 200 ? post.description.substring(0, 100) + "..." : post.description}
                             </p>
-                            <Link href={`/Post/${post.slug}`} className="text-accent">Read More</Link>
+                            <Link rel="preload" href={`/Post/${post.slug}`} className="text-accent">Read More</Link>
                         </div>
                     </div>
                 )

@@ -32,7 +32,7 @@ const YourOrder = () => {
                     </div>
                 )}
 
-                <Link href={'/Order-Confirmation'} passHref>
+                <Link rel="preload" href={'/Order-Confirmation'} passHref>
                     <button
                         disabled={!isFormComplete()}
                         className="border w-full py-3 rounded-md font-semibold duration-200 border-black text-white bg-black hover:text-black hover:bg-white"

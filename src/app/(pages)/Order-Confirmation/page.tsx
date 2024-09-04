@@ -4,7 +4,7 @@ import OrderDetails from "@/app/components/Order-Confirmation/OrderDetails"
 
 const page = () => {
     return (
-        <div className="mx-20 ">
+        <div className="md:mx-20 mx-5 ">
             <h2 className="text-4xl font-medium text-center "> Order Confirmation</h2>
 
 

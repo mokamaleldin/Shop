@@ -4,7 +4,7 @@ import GetPosts from "@/app/components/Blog/GetPosts"
 
 const page = () => {
     return (
-        <div className="mx-20">
+        <div className="md:mx-20 mx-5">
             <div className="my-8">
                 <h2 className="text-4xl font-medium">Blog</h2>
             </div>

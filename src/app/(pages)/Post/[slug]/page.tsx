@@ -4,7 +4,7 @@ import TagsAndShare from "@/app/components/Post/TagsAndShare"
 
 const page = ({ params }: { params: { slug: string } }) => {
     return (
-        <div className="mx-20">
+        <div className="md:mx-20 mx-5">
             <Post postSlug={params.slug} />
             <TagsAndShare />
         </div>

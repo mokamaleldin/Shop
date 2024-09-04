@@ -2,7 +2,7 @@ import Input from "@/app/components/Inputs/Input";
 
 const page = () => {
     return (
-        <div className="mx-20 flex flex-col justify-center items-center py-8 gap-8">
+        <div className="md:mx-20 mx-5 flex flex-col justify-center items-center py-8 gap-8">
             <div className="gap-8 flex flex-col">
                 <h2 className="text-4xl font-medium text-center">Contact Us</h2>
                 <p>Say Hello send us your thoughts about our products or share
