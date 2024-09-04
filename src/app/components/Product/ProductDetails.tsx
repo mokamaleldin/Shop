@@ -7,7 +7,7 @@ export const ProductDetails = ({ product }: { product: TProduct }) => {
     return (
         <div className="flex justify-start">
             <div className="w-1/2 ">
-                <Image width={500} height={500} src={product.image} alt={product.name} />
+                <Image loading="lazy" width={500} height={500} src={product.image} alt={product.name} />
             </div>
             <div className=" w-1/2">
                 <div>

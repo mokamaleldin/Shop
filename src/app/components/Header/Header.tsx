@@ -16,7 +16,7 @@ const Header = () => {
         <header className="flex justify-between items-center mx-20 my-10">
             <div className="flex items-center">
                 <Link href="/">
-                    <Image src="/Header/logo.svg" alt="shop logo" width={100} height={100} />
+                    <Image loading="lazy" src="/Header/logo.svg" alt="shop logo" width={100} height={100} />
                 </Link>
             </div>
             <nav className="flex items-center gap-8 text-sm">
@@ -28,10 +28,10 @@ const Header = () => {
                 <div className="text-DarkGray">|</div>
                 <div className="flex gap-8">
                     <button onClick={handleOpenShopSide} >
-                        <Image src="/icons/shopping.svg" alt="Shopping cart icon" width={20} height={20} />
+                        <Image loading="lazy" src="/icons/shopping.svg" alt="Shopping cart icon" width={20} height={20} />
                     </button>
                     <Link href="/">
-                        <Image src="/icons/search.svg" alt="Search icon" width={20} height={20} />
+                        <Image loading="lazy" src="/icons/search.svg" alt="Search icon" width={20} height={20} />
                     </Link>
                 </div>
             </nav>

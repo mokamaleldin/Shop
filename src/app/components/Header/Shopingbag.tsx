@@ -34,7 +34,7 @@ const Shopingbag = ({ setOpen }: { setOpen: (isOpen: boolean) => void }) => {
                         </div>
                         {cart.map((item) => (
                             <div key={item.SKU} className="flex items-start gap-4 mt-2 mb-4">
-                                <Image width={120} height={120} src={item.image} alt={item.name} />
+                                <Image loading="lazy" width={120} height={120} src={item.image} alt={item.name} />
                                 <div className="flex flex-col">
                                     <div className="flex items-center justify-between font-medium gap-8">
                                         <div>{item.name}</div>

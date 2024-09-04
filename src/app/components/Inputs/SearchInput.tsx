@@ -15,7 +15,7 @@ const SearchInput = () => {
                 onChange={handleChange}
                 placeholder="Search..." className="border-b-2 focus:outline-none border-gray-300 p-1 w-full"
             />
-            <Image src="/icons/search.svg" alt="search" width={20} height={20} className="absolute mr-2" />
+            <Image loading="lazy" src="/icons/search.svg" alt="search" width={20} height={20} className="absolute mr-2" />
         </div>
     )
 }

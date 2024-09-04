@@ -20,10 +20,10 @@ export default function SimpleSlider() {
             loop={true} // التأكد من أن السلايدر يتكرر بشكل غير محدود
         >
             <SwiperSlide >
-                <Image src={'/HomePage/imgHome1.png'} alt="img" width={3000} height={500} className="w-full" />
+                <Image loading="lazy" src={'/HomePage/imgHome1.png'} alt="img" width={3000} height={500} className="w-full" />
             </SwiperSlide>
             <SwiperSlide >
-                <Image src={'/HomePage/imgHome2.png'} alt="img" width={3000} height={1200} className="w-full" />
+                <Image loading="lazy" src={'/HomePage/imgHome2.png'} alt="img" width={3000} height={1200} className="w-full" />
             </SwiperSlide>
         </Swiper>
     );
