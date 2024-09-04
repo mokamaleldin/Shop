@@ -2,6 +2,9 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     filter: "",
+    priceRange: "default",
+    category: "default",
+    discount: false,
 };
 
 const filterSlice = createSlice({
@@ -10,6 +13,15 @@ const filterSlice = createSlice({
     reducers: {
         setFilter: (state, action) => {
             state.filter = action.payload;
+        },
+        setPriceRange: (state, action) => {
+            state.priceRange = action.payload;
+        },
+        setCategory: (state, action) => {
+            state.category = action.payload;
+        },
+        toggleDiscount: (state) => {
+            state.discount = !state.discount;
         },
     },
 });
