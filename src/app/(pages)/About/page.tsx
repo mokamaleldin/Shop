@@ -14,7 +14,7 @@ const page = () => {
                 Our mission is to transform industries, empower individuals, and build a future where technology seamlessly integrates into everyday life.
             </div>
             <div>
-                <Image loading="lazy" src="/Blog/img1.png" width={800} height={800} alt="about" />
+                <Image loading="eager" src="/Blog/img1.png" width={800} height={800} alt="about" />
             </div>
             <div className="md:max-w-[650px]">
                 We pride ourselves on maintaining a strong company culture that promotes growth, collaboration, and innovation.
@@ -40,7 +40,7 @@ const page = () => {
             </div>
 
             <div>
-                <Image loading="lazy" src="/Blog/img4.png" width={500} height={500} alt="about" />
+                <Image loading="eager" src="/Blog/img4.png" width={500} height={500} alt="about" />
             </div>
             <div className="md:max-w-[650px]">
                 Looking to the future, our company aims to expand our reach globally, impacting more lives through our innovative products and services.

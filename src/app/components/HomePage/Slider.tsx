@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import Image from "next/image";
 
+
 export default function SimpleSlider() {
     return (
         <Swiper
@@ -20,10 +21,10 @@ export default function SimpleSlider() {
             loop={true} // التأكد من أن السلايدر يتكرر بشكل غير محدود
         >
             <SwiperSlide >
-                <Image loading="lazy" src={'/HomePage/imgHome1.png'} alt="img" width={3000} height={500} className="w-full" />
+                <Image loading="eager" src={'/HomePage/imgHome1.png'} layout="responsive" alt="img" width={3000} height={500} />
             </SwiperSlide>
             <SwiperSlide >
-                <Image loading="lazy" src={'/HomePage/imgHome2.png'} alt="img" width={3000} height={1200} className="w-full" />
+                <Image loading="eager" src={'/HomePage/imgHome2.png'} layout="responsive" alt="img" width={3000} height={1200} />
             </SwiperSlide>
         </Swiper>
     );

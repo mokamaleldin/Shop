@@ -14,7 +14,7 @@ const Post = ({ postSlug }: { postSlug: string }) => {
                                 <div className="text-DarkGray">-</div>
                                 <div className="text-DarkGray">{post.date}</div>
                             </div>
-                            <Image loading="lazy" width={1200} height={1200} src={post.img} alt={post.title} />
+                            <Image loading="eager" width={1200} height={1200} src={post.img} alt={post.title} />
                             <p className="text-black text-lg max-w-[700px] ">{post.description}</p>
                         </div>
                     )

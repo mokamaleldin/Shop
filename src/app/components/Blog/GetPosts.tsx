@@ -21,7 +21,7 @@ const GetPosts = () => {
                 return (
                     <div key={index}>
                         <Link href={`/Post/${post.slug}`} >
-                            <Image loading="lazy" width={500} height={500} src={post.img} alt={post.title} />
+                            <Image loading="eager" width={500} height={500} src={post.img} alt={post.title} />
                         </Link>
                         <div className="text-sm text-DarkGray flex flex-col gap-4 mt-4">
                             <div className="flex gap-1">

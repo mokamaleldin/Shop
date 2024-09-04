@@ -25,7 +25,7 @@ const BlogNavbar = () => {
                     onChange={handleChange}
                     placeholder="Search..." className="border-b-2 focus:outline-none border-gray-300 p-1 w-full"
                 />
-                <Image loading="lazy" src="/icons/search.svg" alt="search" width={20} height={20} className="absolute mr-2" />
+                <Image loading="eager" src="/icons/search.svg" alt="search" width={20} height={20} className="absolute mr-2" />
             </div>
             <div className="my-8">
                 <h3 className="text-xl font-medium mb-4">Categories</h3>
