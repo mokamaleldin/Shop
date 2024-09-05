@@ -41,7 +41,7 @@ const OrderSummary = () => {
             </div>
 
             <hr className="border-t-2 border-Gray my-4" />
-            <div className="flex justify-between font-semibold mb-8">
+            <div className="flex justify-between font-semibold">
                 <p>TOTAL</p>
                 <p className="">${finalPrice}</p>
             </div>

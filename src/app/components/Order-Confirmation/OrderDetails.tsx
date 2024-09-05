@@ -1,14 +1,20 @@
 import { RootState } from "@/app/lib/store";
-import generateRandomOrderNumber from "@/app/lib/utils/orderNumber";
+import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 const OrderDetails = () => {
     const { cardNumber, email, cvv, cardholderName, streetAddress, postcode, city, country, phone } = useSelector((state: RootState) => state.checkout);
+    const [orderNumber, setOrderNumber] = useState<string | null>(null);
 
-    const orderNumber = generateRandomOrderNumber();
+    useEffect(() => {
+        const generateRandomOrderNumber = (): string => {
+            return Math.floor(Math.random() * 10000000000000).toString();
+        };
+        setOrderNumber(generateRandomOrderNumber());
+    }, []);
 
     return (
-        <div>
+        <div className="md:text-base text-sm">
             <div className="flex justify-between items-start mb-8">
                 <div>
                     <h6>ORDER NUMBER</h6>
