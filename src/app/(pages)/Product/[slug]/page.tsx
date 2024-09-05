@@ -9,7 +9,7 @@ const page = ({ params }: { params: { slug: string } }) => {
             {products.map((product) => {
                 if (product.slug === params.slug) {
                     return (
-                        <div key={product.SKU} className="mb-16">
+                        <div key={product.SKU} className="md:mb-16">
                             <ProductDetails product={product} />
                             <AboutProduct product={product} />
                             <SimilarItemsProduct category={product.category || ""} SKU={product.SKU} />
