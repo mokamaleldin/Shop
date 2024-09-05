@@ -3,7 +3,7 @@ import Card from "./Card"
 const CardHome = () => {
 
     return (
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-2">
+        <div className="grid md:grid-cols-3 grid-cols-2 gap-2">
             {products.map((product) => (
                 <Card key={product.name} product={product} />
             ))}

@@ -8,7 +8,7 @@ const OrderDetails = () => {
 
     useEffect(() => {
         const generateRandomOrderNumber = (): string => {
-            return Math.floor(Math.random() * 10000000000000).toString();
+            return Math.floor(Math.random() * 10000000000).toString();
         };
         setOrderNumber(generateRandomOrderNumber());
     }, []);
