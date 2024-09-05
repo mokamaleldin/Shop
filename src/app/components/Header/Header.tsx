@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Image from "next/image"
 import Link from "next/link"
 import ShopSide from './ShopSide'
+import MobileMenu from './MobileMenu'
 
 const Header = () => {
     const [open, setOpen] = useState(false)
@@ -11,6 +12,8 @@ const Header = () => {
     const handleOpenShopSide = () => {
         setOpen(!open)
     }
+
+
 
     return (
         <header className="flex justify-between items-center md:mx-20 mx-5 my-10">
@@ -20,17 +23,20 @@ const Header = () => {
                 </Link>
             </div>
             <nav className="flex items-center gap-8 text-sm">
-                <div className="flex gap-8">
+
+                <div className="hidden md:flex gap-8">
                     <Link rel="preload" href="/Shop">Shop</Link>
                     <Link rel="preload" href="/Blog">Blog</Link>
                     <Link rel="preload" href="/About">Our Story</Link>
                 </div>
-                <div className="text-DarkGray">|</div>
+
+                <MobileMenu />
+                <div className="hidden md:flex text-DarkGray">|</div>
                 <div className="flex gap-8">
                     <button onClick={handleOpenShopSide} >
                         <Image loading="eager" src="/icons/shopping.svg" alt="Shopping cart icon" width={20} height={20} />
                     </button>
-                    <Link rel="preload" href="/">
+                    <Link rel="preload" href="/" className='hidden md:flex'>
                         <Image loading="eager" src="/icons/search.svg" alt="Search icon" width={20} height={20} />
                     </Link>
                 </div>
