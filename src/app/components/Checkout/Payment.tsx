@@ -14,7 +14,7 @@ const Payment = () => {
     }
     return (
         <div>
-            <div className="flex justify-between items-center font-semibold mb-8">
+            <div className="md:flex justify-between items-center font-semibold mb-8">
                 <p className="font-semibold">Payment Methods</p>
                 <PaymentImg />
             </div>

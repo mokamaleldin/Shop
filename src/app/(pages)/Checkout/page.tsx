@@ -8,11 +8,11 @@ const page = () => {
         <div className="md:mx-20 mx-5-20 mx-5">
             <h2 className="md:text-4xl text-2xl font-medium text-center ">Checkout</h2>
             <Coupon />
-            <div className="flex justify-center items-start gap-8">
-                <div className="w-1/2">
+            <div className="md:flex justify-center items-start gap-8">
+                <div className="md:w-1/2">
                     <DillingDetails />
                 </div>
-                <div className="w-1/2">
+                <div className="md:w-1/2">
                     <YourOrder />
                 </div>
             </div>

@@ -19,7 +19,7 @@ const YourOrder = () => {
     return (
         <div>
             <h2 className="text-2xl font-medium  ">Billing Details</h2>
-            <div className="my-4 px-16 py-8 font-medium text-sm bg-LightGray">
+            <div className="my-4 md:px-16 px-4 py-8 font-medium text-sm bg-LightGray">
                 <OrderSummary />
                 <div className="mb-12">
                     <hr className="border-t-2 border-Gray my-4" />
