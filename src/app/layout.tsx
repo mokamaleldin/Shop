@@ -3,8 +3,6 @@ import { dmSans } from '@/app/ui/fonts';
 import "./ui/globals.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import { Provider } from "react-redux";
-import store from "./lib/store";
 import StoreProvider from "./StoreProvider";
 
 export const metadata: Metadata = {
