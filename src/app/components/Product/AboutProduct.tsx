@@ -16,10 +16,10 @@ const AboutProduct = ({ product }: { product: TProduct }) => {
             </div>
             <hr className="border-t-2 border-gray-300 pb-8" />
 
-            {tab === "description" && <div className="text-DarkGray text-sm">
+            {tab === "description" && <div className="text-DarkGray md:text-base text-sm">
                 {product.description}
             </div>}
-            {tab === "aditional" && <div className="flex flex-col gap-2">
+            {tab === "aditional" && <div className="flex flex-col gap-2 md:text-base text-sm">
                 <div>Weight : <span className="ml-3 font-normal text-DarkGray">{product.additionalInfo?.weight}</span></div>
                 <div>Dimentions : <span className="ml-3 font-normal text-DarkGray">{product.additionalInfo?.dimensions}</span></div>
                 <div>Colours : <span className="ml-3 font-normal text-DarkGray">{product.additionalInfo?.colours}</span></div>

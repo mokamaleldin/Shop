@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const ProductShareIcon = () => {
     return (
-        <div className="flex gap-8 py-8 text-Gray items-center">
+        <div className="flex gap-8  md:py-8 text-Gray items-center md:justify-normal justify-center">
             <Link rel="preload" href="https://love.com" aria-label="LinkedIn">
                 <Image loading="eager" src="/icons/love.svg" alt="LinkedIn icon" width={20} height={20} />
             </Link>

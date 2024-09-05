@@ -26,14 +26,14 @@ const AddToCard = ({ product }: { product: TProduct }) => {
     };
 
     return (
-        <div className="flex items-center gap-10 py-8">
+        <div className="flex md:justify-normal justify-center items-center md:gap-10 gap-5 py-8">
             <div className="bg-LightGray text-DarkGray flex gap-6 px-8 py-3 rounded-md">
                 <button onClick={handleDecrement}>-</button>
                 <div>{productQuantity}</div>
                 <button onClick={handleIncrement}>+</button>
             </div>
             <div>
-                <button onClick={handleAddToCart} className="border px-16 py-3 rounded-md font-semibold duration-200 border-black text-black hover:text-white hover:bg-black">
+                <button onClick={handleAddToCart} className="border px-3 md:px-16 py-3 rounded-md font-semibold duration-200 border-black text-black hover:text-white hover:bg-black">
                     ADD TO CART
                 </button>
             </div>

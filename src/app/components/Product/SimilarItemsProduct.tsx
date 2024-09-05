@@ -4,7 +4,7 @@ import Card from "../Card/Card"
 const SimilarItemsProduct = ({ category, SKU }: { category: string, SKU: string }) => {
     return (
         //make it take the first 3 items from the array
-        <div className="grid grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-3 grid-cols-1 md:gap-5">
             {products.map((product) => {
                 if (category === product.category && SKU !== product.SKU) {
                     return (
