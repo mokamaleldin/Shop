@@ -1,6 +1,7 @@
 "use client"
 import OrderSummary from "@/app/components/Checkout/OrderSummary"
 import OrderDetails from "@/app/components/Order-Confirmation/OrderDetails"
+import PDFButton from "@/app/components/PDF/PDFButton"
 
 const page = () => {
     return (
@@ -24,6 +25,7 @@ const page = () => {
                 </div>
             </div>
 
+            <PDFButton />
         </div>
     )
 }

@@ -1,9 +1,11 @@
+"use client";
+
 import { RootState } from "@/app/lib/store";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
 const OrderDetails = () => {
-    const { cardNumber, email, cvv, cardholderName, streetAddress, postcode, city, country, phone } = useSelector((state: RootState) => state.checkout);
+    const { cardNumber, email, streetAddress, postcode, city, country, phone } = useSelector((state: RootState) => state.checkout);
     const [orderNumber, setOrderNumber] = useState<string | null>(null);
 
     useEffect(() => {
