@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 const DeleteItems = ({ SKU }: { SKU: string }) => {
     const dispatch = useDispatch()
     const handleRemoveFromCart = (SKU: string) => {
-        dispatch(CardAction.removeFromCart(SKU));
+        dispatch(CardAction.removeAllFromCart(SKU));
     }
     return (
         <div className="hover:text-red-700">

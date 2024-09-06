@@ -40,6 +40,14 @@ const cardSlice = createSlice({
                 }
             }
         },
+        removeAllFromCart(state, action: PayloadAction<string>) {
+            const SKU = action.payload;
+            const existingItem = state.items.find(item => item.SKU === SKU);
+            if (existingItem) {
+                state.quantity -= existingItem.quantity;
+                state.items = state.items.filter(item => item.SKU !== SKU);
+            }
+        },
     },
 });
 
