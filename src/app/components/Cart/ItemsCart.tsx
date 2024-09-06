@@ -5,6 +5,7 @@ import DeleteItems from "./DeleteItems";
 import { useDispatch, useSelector } from "react-redux";
 import { CardAction } from "@/app/lib/store/features/cartSlice";
 import { RootState } from "@/app/lib/store";
+import { redirect } from "next/navigation";
 
 const ItemsCart = () => {
     const cart = useSelector((state: RootState) => state.card.items);
@@ -17,6 +18,10 @@ const ItemsCart = () => {
     const handleDecrement = (SKU: string) => {
         dispatch(CardAction.removeFromCart(SKU));
     };
+
+    if (cart.length === 0) {
+        redirect("/Shop")
+    }
     return (
         <>
             {

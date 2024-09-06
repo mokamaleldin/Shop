@@ -1,5 +1,6 @@
 import { additionalCost, driveFreeThreshold } from "@/app/lib/config/config";
 import { RootState } from "@/app/lib/store";
+import { redirect } from "next/navigation";
 import { useSelector } from "react-redux";
 
 const OrderSummary = () => {
@@ -12,6 +13,10 @@ const OrderSummary = () => {
     const free = totalPrice < driveFreeThreshold ? "Shipping is not free" : "Free shipping";
     const subtotal = totalPrice < driveFreeThreshold ? totalPrice + additionalCost : totalPrice;
     const finalPrice = subtotal * (1 - discount); 
+
+    if (cart.length === 0) {
+        redirect("/Shop")
+    }
 
     return (
         <>
