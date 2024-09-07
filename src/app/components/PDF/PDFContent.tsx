@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { RootState } from "@/app/lib/store";
 import { additionalCost, driveFreeThreshold } from '@/app/lib/config/config';
 
-const PDFContent = React.forwardRef<HTMLDivElement>((props, ref) => {
+const PDFContent = ({ ref }: any) => {
     const { cardNumber, email, streetAddress, postcode, city, country, phone } = useSelector((state: RootState) => state.checkout);
     const { discount } = useSelector((state: RootState) => state.coupon);
     const cart = useSelector((state: RootState) => state.card.items);
@@ -41,6 +41,6 @@ const PDFContent = React.forwardRef<HTMLDivElement>((props, ref) => {
             <p><strong>Final Price:</strong> ${finalPrice.toFixed(2)}</p>
         </div>
     );
-});
+}
 
 export default PDFContent;
