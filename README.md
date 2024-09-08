@@ -61,12 +61,6 @@ You can also deploy using other platforms like Netlify or AWS.
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for more information.
 
-
-## Screenshots
-
-![Home Page](./screenshots/homepage.png)
-![Product Page](./screenshots/productpage.png)
-
 ## Live Demo
 
 Check out the live version of the shop: [Your Shop Live Demo](https://yourshop.vercel.app)
