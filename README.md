@@ -13,7 +13,7 @@ Welcome to **[Your Shop Name]**, the ultimate online store for stylish and trend
 
 ## Getting Started
 
-To set up the development environment for **[Your Shop Name]**, follow these steps:
+To set up the development environment for **Shop**, follow these steps:
 
 1. **Clone the repository:**
 
@@ -47,7 +47,7 @@ To set up the development environment for **[Your Shop Name]**, follow these ste
 
 ## Deployment
 
-To deploy **[Your Shop Name]** on Vercel:
+To deploy **Shop** on Vercel:
 
 1. **Create a Vercel account** if you don't already have one.
 2. **Import your project** from GitHub into Vercel.
