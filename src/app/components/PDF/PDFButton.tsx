@@ -1,22 +1,30 @@
 "use client";
 import React, { useRef } from "react";
-import html2pdf from "html2pdf.js";
 import PDFContent from "./PDFContent";
 
 const PDFButton = () => {
     const pdfContentRef = useRef<HTMLDivElement>(null);
 
-    const handleGeneratePDF = () => {
+    const handleGeneratePDF = async () => {
         if (pdfContentRef.current) {
-            const opt = {
-                margin: 0.5,
-                filename: 'Order-Confirmation.pdf',
-                image: { type: 'jpeg', quality: 0.98 },
-                html2canvas: { scale: 2 },
-                jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-            };
+            try {
+                const html2pdf = (await import('html2pdf.js')).default;
+                console.log('html2pdf loaded successfully');
+                const opt = {
+                    margin: 0.5,
+                    filename: 'Order-Confirmation.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                };
 
-            html2pdf().from(pdfContentRef.current).set(opt).save();
+                html2pdf().from(pdfContentRef.current).set(opt).save();
+                console.log('PDF generated successfully');
+            } catch (error) {
+                console.error('Error during PDF generation:', error);
+            }
+        } else {
+            console.error('pdfContentRef.current is null');
         }
     };
 
@@ -31,6 +39,7 @@ const PDFButton = () => {
             </div>
 
         </div>
-    )
-}
-export default PDFButton
+    );
+};
+
+export default PDFButton;
