@@ -1,20 +1,13 @@
-"use client"
-import React, { useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
-const PDFContent = dynamic(() => import("./PDFContent"), { ssr: false });
+"use client";
+import React, { useRef } from "react";
+import html2pdf from "html2pdf.js";
+import PDFContent from "./PDFContent";
 
 const PDFButton = () => {
     const pdfContentRef = useRef<HTMLDivElement>(null);
-    const [html2pdf, setHtml2pdf] = useState<any>(null);
-
-    useEffect(() => {
-        import("html2pdf.js").then((module) => {
-            setHtml2pdf(module.default);
-        });
-    }, []);
 
     const handleGeneratePDF = () => {
-        if (pdfContentRef.current && html2pdf) {
+        if (pdfContentRef.current) {
             const opt = {
                 margin: 0.5,
                 filename: 'Order-Confirmation.pdf',
@@ -36,6 +29,7 @@ const PDFButton = () => {
             <div className="hidden">
                 <PDFContent ref={pdfContentRef} />
             </div>
+
         </div>
     )
 }
