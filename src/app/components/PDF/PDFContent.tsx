@@ -4,7 +4,7 @@ import { RootState } from "@/app/lib/store";
 import { additionalCost, driveFreeThreshold } from '@/app/lib/config/config';
 
 const PDFContent = forwardRef<HTMLDivElement>((props, ref) => {
-    const { cardNumber, email, streetAddress, postcode, city, country, phone } = useSelector((state: RootState) => state.checkout);
+    const { email, streetAddress, postcode, city, country, phone } = useSelector((state: RootState) => state.checkout);
     const { discount } = useSelector((state: RootState) => state.coupon);
     const cart = useSelector((state: RootState) => state.card.items);
 
@@ -18,7 +18,6 @@ const PDFContent = forwardRef<HTMLDivElement>((props, ref) => {
             <h2 className="text-2xl font-bold mb-4 text-red-500">Order Confirmation</h2>
 
             <div className="mb-4">
-                <p><strong>Card Number:</strong> {cardNumber}</p>
                 <p><strong>Email:</strong> {email}</p>
                 <p><strong>Address:</strong> {streetAddress}, {postcode}, {city}, {country}</p>
                 <p><strong>Phone:</strong> {phone}</p>
