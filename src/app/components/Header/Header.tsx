@@ -5,6 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import ShopSide from './ShopSide'
 import MobileMenu from './MobileMenu'
+import { usePathname, useRouter } from 'next/navigation'
 
 const Header = () => {
     const [open, setOpen] = useState(false)
@@ -12,9 +13,7 @@ const Header = () => {
     const handleOpenShopSide = () => {
         setOpen(!open)
     }
-
-
-
+    const pathname = usePathname();
     return (
         <header className="flex justify-between items-center md:mx-20 mx-5 my-10">
             <div className="flex items-center">
@@ -25,13 +24,14 @@ const Header = () => {
             <nav className="flex items-center gap-8 text-sm">
 
                 <div className="hidden md:flex gap-8">
-                    <Link rel="preload" href="/Shop">Shop</Link>
-                    <Link rel="preload" href="/Blog">Blog</Link>
-                    <Link rel="preload" href="/About">Our Story</Link>
+                    <Link className={pathname === '/Shop' ? 'underline underline-offset-8' : ''} rel="preload" href="/Shop">Shop</Link>
+                    <Link className={pathname === '/Blog' ? 'underline underline-offset-8' : ''} rel="preload" href="/Blog">Blog</Link>
+                    <Link className={pathname === '/About' ? 'underline underline-offset-8' : ''} rel="preload" href="/About">Our Story</Link>
                 </div>
 
                 <MobileMenu />
                 <div className="hidden md:flex text-DarkGray">|</div>
+
                 <div className="flex gap-8">
                     <button onClick={handleOpenShopSide} >
                         <Image loading="eager" src="/icons/shopping.svg" alt="Shopping cart icon" width={20} height={20} />
