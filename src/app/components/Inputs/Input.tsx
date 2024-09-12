@@ -15,6 +15,7 @@ const Input: React.FC<InputProps> = ({ placeholder, value, onChange, required = 
                 required={required}
                 onChange={onChange}
                 value={value}
+                name={placeholder}
                 className="border-b-2 focus:outline-none text-sm border-Gray py-3 w-full"
             />
         </div>

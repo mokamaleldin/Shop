@@ -1,8 +1,8 @@
-// app/signup/page.tsx
 'use client';
 
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { useRouter } from 'next/navigation';
+import Input from "../../components/Inputs/Input"
 
 interface FormData {
     name: string;
@@ -38,10 +38,16 @@ export default function Signup() {
 
     return (
         <form onSubmit={handleSubmit}>
-            <input name="name" placeholder="Name" onChange={handleChange} />
-            <input name="email" placeholder="Email" type="email" onChange={handleChange} />
-            <input name="password" placeholder="Password" type="password" onChange={handleChange} />
-            <button type="submit">Signup</button>
+            <Input placeholder="name" onChange={handleChange} required />
+            <Input placeholder="email" type="email" onChange={handleChange} required />
+            <Input placeholder="password" type="password" onChange={handleChange} required />
+
+            <button
+                className="md:mt-0 mt-4 border md:w-1/2 py-1 md:py-3 md:px-10 px-2 md:text-base text-sm rounded-md md:font-semibold duration-200 border-black text-white bg-black hover:text-black hover:bg-white"
+                type="submit"
+            >
+                Signup
+            </button>
         </form>
     );
 }
