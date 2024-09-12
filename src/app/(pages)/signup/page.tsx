@@ -37,10 +37,14 @@ export default function Signup() {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <Input placeholder="name" onChange={handleChange} required />
-            <Input placeholder="email" type="email" onChange={handleChange} required />
-            <Input placeholder="password" type="password" onChange={handleChange} required />
+        <form onSubmit={handleSubmit} className='flex flex-col justify-center items-center md:mx-20 mx-5 gap-8 my-60'>
+
+            <h2 className="md:text-4xl text-2xl font-medium text-center">My account</h2>
+            <div className='w-1/2 flex flex-col gap-8'>
+                <Input placeholder="name" onChange={handleChange} required />
+                <Input placeholder="email" type="email" onChange={handleChange} required />
+                <Input placeholder="password" type="password" onChange={handleChange} required />
+            </div>
 
             <button
                 className="md:mt-0 mt-4 border md:w-1/2 py-1 md:py-3 md:px-10 px-2 md:text-base text-sm rounded-md md:font-semibold duration-200 border-black text-white bg-black hover:text-black hover:bg-white"
@@ -48,6 +52,8 @@ export default function Signup() {
             >
                 Signup
             </button>
+
+
         </form>
     );
 }
