@@ -39,7 +39,7 @@ const Header = () => {
                     <Link rel="preload" href="/" className='hidden md:flex'>
                         <Image loading="eager" src="/icons/search.svg" alt="Search icon" width={20} height={20} />
                     </Link>
-                    <Link rel="preload" href="/" className='hidden md:flex'>
+                    <Link rel="preload" href="/user" className='hidden md:flex'>
                         <Image loading="eager" src="/icons/user.svg" alt="Search icon" width={20} height={20} />
                     </Link>
                 </div>
